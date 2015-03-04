@@ -8,22 +8,34 @@
         <script type="text/javascript" src="d3/d3.v3.js"></script>
     </head>
     <body>
-        <div class="container">
-            <script type="text/javascript">
-                var dataset = [ 5, 10, 15, 20, 25 ];
+        <div class="separator">
+        </div>
 
-                d3.select(".container").selectAll("p")
+        <div class="container">
+            <svg width="500" height="100">
+                <!-- <rect x="0" y="0" width="500" height="50"/> -->
+                <circle class="circle" cx="250" cy="50" r="25"/>
+                <ellipse class="elipse" cx="90" cy="25" rx="100" ry="25"/>
+                <line x1="0" y1="0" x2="500" y2="50" stroke="black"/>
+                <text x="250" y="50" font-family="sans-serif"
+                font-size="25" fill="gray">Easy-peasy</text>
+            </svg>
+
+        </div>
+        <div class="container deethree">
+            <script type="text/javascript">
+                var dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
+                14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
+                24, 18, 25, 9, 3 ];
+
+                d3.select(".deethree").selectAll("p")
                     .data(dataset)
                     .enter()
                     .append("div")
-                    .text(function(d) { return d; })
-                    .style("color", function(d) {
-                        if (d > 15) {   //Threshold of 15
-                            return "red";
-                        } else {
-                            return "black";
-                        }
-                    }).attr("class", "bar");
+                    .attr("class", "bar")
+                    .style("height", function(d) {
+                        return (d * 5) + "px";
+                    });
             </script>
         </div>
     </body>

@@ -73,6 +73,23 @@ div.bar {
   width: 20px;
   height: 75px;
   /* We'll override this later */
-  margin: 10px;
+  margin-right: 3px;
   background-color: teal;
+}
+
+/* line 16, ../sass/screen.scss */
+.separator {
+  height: 60px;
+}
+
+/* line 20, ../sass/screen.scss */
+.circle {
+  fill: red;
+  stroke: green;
+  stroke-width: 3px;
+}
+
+/* line 26, ../sass/screen.scss */
+.elipse {
+  fill: blue;
 }

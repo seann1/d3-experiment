@@ -9,6 +9,20 @@ div.bar {
     display: inline-block;
     width: 20px;
     height: 75px;   /* We'll override this later */
-    margin: 10px;
+    margin-right: 3px;
     background-color: teal;
+}
+
+.separator {
+	height: 60px;
+}
+
+.circle {
+	fill: red;
+	stroke: green;
+	stroke-width: 3px;
+}
+
+.elipse {
+	fill: blue;
 }
